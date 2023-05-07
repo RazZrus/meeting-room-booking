@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="index.css">
+        <title>Meeting rooms</title>
+    </head>
+    <body>
+        <main>
+            <div class="head-info">
+                <h1>Meeting rooms</h1>
+                <p>Бронирование комнат для переговоров в Москве</p>
+            </div>
+            <p>Чтобы забронировать комнату, заполните форму ниже</p>
+            <div class="form-wrapper">
+                <div class="dropdown-menu">
+                    <p>Выберите башню:</p>
+                    <div class="dropdown">
+                        <button type="button" class="dropdown-button">Выберите</button>
+                        <ul class="tower-list list hidden">
+                            <li class="list-item" data-value="Башня А">
+                                Башня А
+                            </li>
+                            <li class="list-item" data-value="Башня Б">
+                                Башня Б
+                            </li>
+                        </ul>
+                        <input type="text" class="dropdown-input hidden" data-value="tower">
+                    </div>
+                </div>
+                <div class="dropdown-menu">
+                    <p>Выберите этаж:</p>
+                    <div class="dropdown">
+                        <button type="button" class="dropdown-button">Выберите</button>
+                        <ul class="floor-list list hidden"></ul>
+                        <input type="text" class="dropdown-input hidden" data-value="floor">
+                    </div>
+                </div>
+                <div class="dropdown-menu">
+                    <p>Выберите переговорную:</p>
+                    <div class="dropdown">
+                        <button type="button" class="dropdown-button">Выберите</button>
+                        <ul class="room-list list hidden"></ul>
+                        <input type="text" class="dropdown-input hidden" data-value="room">
+                    </div>
+                </div>
+                <div class="dropdown-menu">
+                    <p>Выберите дату и время:</p>
+                    <div class="">
+                        <input type="date" class="dropdown-input input dropdown-button black-text" data-value="date" oninput="removeUnfilled()">
+                    </div>
+                    <div class="dropdown">
+                        <button type="button" class="dropdown-button">Выберите</button>
+                        <ul class="time-list list hidden"></ul>
+                        <input type="text" class="dropdown-input hidden" data-value="time">
+                    </div>
+                </div>
+                <div class="dropdown-menu">
+                    <p>Добавьте комментарий:</p>
+                    <div class="">
+                        <input type="text" class="dropdown-input input dropdown-button black-text" data-value="comment" oninput="removeUnfilled()">
+                    </div>
+                </div>
+                <div class="form-buttons">
+                    <button type="button" class="form-button clear-button button">Очистить</button>
+                    <button type="button" class="form-button send-button button">Отправить</button>
+                </div>
+                <p class="form-sent hidden">Форма отправлена!</p>
+            </div>
+        </main>
+        <footer>
+            <h2>Made by Dmitry Smotryaev</h2>
+        </footer>
+    </body>
+    <script src="index.js"></script>
+</html>
