@@ -42,7 +42,7 @@ function createTimeIntervals() {
 
 function focusUnfilledButtons(answers) {
     let buttons = document.querySelectorAll(".dropdown-button");
-    for(let i = 0; i < buttons.length; i++) {
+    for(let i = 0; i < buttons.length - 1; i++) {
         if (answers[i] == 0) {
             buttons[i].classList.add("unfilled");
         }
@@ -72,6 +72,7 @@ document.querySelectorAll(".form-button").forEach(function(item) {
                 data[input.dataset.value] = input.value;
                 answers.push(input.value);
             });
+            answers.pop();
             answers = answers.map(function(answersItem) {
                 if (answersItem == "") {
                     return 0;
